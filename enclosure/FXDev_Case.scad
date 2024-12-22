@@ -14,13 +14,13 @@ show_half = 1;      // 0 = bottom;     1 = top
 show_board = 0;     // 0 = don't show; 1 = show
 
 
-$fn=30;
+$fn=50;
 
 // case outer dimensions
 case_len = 97;
 case_width = 54;
 case_thick = 13.5;
-mink_edge = 1;
+mink_edge = 2;
 
 // case card-edge dimensions
 end_hole_deep = 8.5;
@@ -39,9 +39,9 @@ overshoot = 0.1;
 cyl_outer_rad = (4.0/2);  // 4.0 mm (support hole in PC board is actually 4.4mm
 cyl_inner_rad = (2.3/2);  // 2.0 mm (for ?? screw shaft)
 screwhead_depth = 2.0;
-screwhead_rad = (3.7/2);
+screwhead_rad = (3.8/2);
 nuthead_depth = 1.5;
-nuthead_rad = (4.7/2);
+nuthead_rad = (4.8/2);
 
 // relative to board
 bottom_z = 11.3654;
@@ -50,8 +50,9 @@ left_x = 46.4086;
 right_x = 3.5814;
 
 //Text
-text_size = 9;
+text_size = 9.5;
 text_size_2 = 8;
+text_size_fxdev = 10.5;
 text_depth = 0.5;
 
 // bottom_well
@@ -270,13 +271,13 @@ difference() {
 
     // Subtract Text (bottom half)
     if (show_half == 0) {
-        translate([((case_width/2)+(text_size/2)), text_depth, 72])
+        translate([((case_width/2)+(text_size*.3)), text_depth, 71])
         rotate([0,90,0])
         rotate([90,0,0])
         linear_extrude(text_depth+overshoot)
         text("PC-FX", size = text_size, valign="baseline", font="Liberation Sans:style=Bold", language="en", script="latin");
 
-        translate([((case_width/2)-(1.2*text_size_2)), text_depth, 78])
+        translate([((case_width/2)-(1.25*text_size_2)), text_depth, 77])
         rotate([0,90,0])
         rotate([90,0,0])
         linear_extrude(text_depth+overshoot)
@@ -285,11 +286,11 @@ difference() {
 
     // Subtract Text (top half)
     if (show_half == 1) {
-        translate([((case_width-text_size)/2), case_thick-text_depth+overshoot, 30])
+        translate([((case_width-text_size)/2), case_thick-text_depth+overshoot, 25])
         rotate([0,-90,0])
         rotate([-90,0,0])
         linear_extrude(text_depth+overshoot)
-        text("FX-DEV", size = text_size, valign="baseline", font="Liberation Sans:style=Bold", language="en", script="latin");
+        text("FX-DEV", size = text_size_fxdev, valign="baseline", font="Liberation Sans:style=Bold", language="en", script="latin");
     }
 
 }
