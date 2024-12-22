@@ -3,7 +3,8 @@
 This is a design of a development cart for the PC-FX, based almost entirely on the
 RP2040 microcontroller.
 
-proper 3D case is also included in this repository.
+A 3D model of a proper case is also included in this repository.
+
 Here is a photo of a complete unit:
 
 ![Cart in Case](images/devcart_in_case.jpg)
