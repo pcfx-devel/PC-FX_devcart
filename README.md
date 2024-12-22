@@ -3,6 +3,12 @@
 This is a design of a development cart for the PC-FX, based almost entirely on the
 RP2040 microcontroller.
 
+proper 3D case is also included in this repository.
+Here is a photo of a complete unit:
+
+![Cart in Case](images/devcart_in_case.jpg)
+
+
 ##  Current Board Revision
 
 The current version is Ver2_RevB.
@@ -10,8 +16,6 @@ The current version is Ver2_RevB.
 
 The only changes from RevA to Rev B are related to schematic annotations, and a minor labelling update on the PC
 Board itself, so the picture of RevA is included here.
-
-In future, there are plans for a proper 3D printed case.
 
 ![Prototype Board](images/devcart_ver2_reva.jpg)
 
