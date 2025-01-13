@@ -71,6 +71,16 @@ pinhole_radius = (1.4/2);
 grip_length = 32;
 
 
+module LED_overhang(use_overshoot) {
+    translate([35.7,(case_thick/2)+0.8-board_thick, -use_overshoot]) {
+        linear_extrude(usb_edge-board_edge_tol+(2*use_overshoot)) {
+            minkowski() {            
+                polygon(points=[[0,2],[9,2],[8,0],[1,0]] );
+                circle(1);
+            }
+        }
+    }
+}
 
 module support_cylinder(x_pos, y_pos) {     // additive, meant for bottom side
     translate([((case_width - board_width)/2)+x_pos, (case_thick/2), (usb_edge+y_pos)]) {
@@ -199,7 +209,7 @@ difference() {
                         linear_extrude(1.5) {
                             minkowski() {
                                polygon([[0,-2],[3,-3],[7,0],[7,5],[0,5]]);
-                                circle(2);
+                               circle(2);
                             }
                         }
                     }
@@ -214,6 +224,18 @@ difference() {
             support_cylinder(left_x, top_z);        // top left
             support_cylinder(right_x, top_z);       // top right
         }
+
+        // Need to make an overhang to allow LEDs to shine clearly
+        // add notch (top)
+        if (show_half == 1) {
+            LED_overhang(0);
+        }
+    }
+
+    // Need to make an overhang to allow LEDs to shine clearly
+    // Subtract notch (bottom)
+    if (show_half == 0) {
+        LED_overhang(overshoot);
     }
     
     // subtract support cylinder screw shafts (both halves)

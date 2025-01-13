@@ -11,16 +11,6 @@ as to align the card edge with the slot, and allow easy insertion and removal.
 This design was made in two halves, both of which are described within the same design file.
 
 
-##  Design Tool - Why OpenSCAD ?
-
-While most people study 3D design in Blender or Fusion 360, I chose the OpenSCAD for my design.
-The reasons are as follows:
- 1. OpenSCAD is a free tool and is cross-platform.
- 2. As it is code-based, it's easier for a programmer type (like myself) to become comfortable with.
- 3. As it's basically code, it should be straightforward to make make edits to any portion of the design at a later date, without needing much effort.
- 4. It's simple to have both halves of the case in a single design, driven by a variable - ensuring that dimensions match.
-
-
 ## Overview
 
 The case design was a ground-up design using OpenSCAD 2021.01 .
@@ -37,6 +27,16 @@ show_board = 0;     // 0 = don't show; 1 = show
 ```
 You can enable either the bottom half or the top half (and render in preparation for STL output); you can also
 show the PC board (an STL visualization of the board is also included, to check alignment of various features).
+
+
+##  Design Tool - Why OpenSCAD ?
+
+While most people study 3D design in Blender or Fusion 360, I chose the OpenSCAD for my design.
+The reasons are as follows:
+ 1. OpenSCAD is a free tool and is cross-platform.
+ 2. As it is code-based, it's easier for a programmer type (like myself) to become comfortable with.
+ 3. As it's basically code, it should be straightforward to make make edits to any portion of the design at a later date, without needing much effort.
+ 4. It's simple to have both halves of the case in a single design, driven by a variable - ensuring that dimensions match.
 
 
 ## Files
