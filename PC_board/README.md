@@ -7,15 +7,15 @@ This is the PC board design of a development cart for the PC-FX, based on the RP
 The current version is Ver2_RevB.
 [(For the Protoype board using an Olimex RP2040-Pico30 module, please click here.)](README_prototype.md)
 
-The only changes from RevA to Rev B are related to schematic annotations, and a minor labelling update on the PC Board itself,
-so the picture of RevA is included here.
+The only changes from RevA to Rev B are related to schematic annotations, LED current-limiting resistor values, and a minor
+labelling update on the PC Board itself, so the picture of RevA is included here.
 
 ![Current version](../images/devcart_ver2_reva.jpg)
 
 
 ## Overview
 
-The board design was a ground-up design for 4-layer board using KiCAD 8.0.4 .
+The board design was a ground-up design for 4-layer board using KiCAD 8.0.7 .
 
 As this was my first KiCAD design of a reasonable complexity, I was happy to receive some guidance
 and schematic updates from [Regis Galland](https://github.com/rgalland).
