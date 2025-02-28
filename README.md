@@ -10,7 +10,7 @@ Here is a photo of a complete unit:
 ![Cart in Case](images/devcart_in_case.jpg)
 
 
-##  Current Board Revision
+## Current Board Revision
 
 The current version is Ver2_RevB.
 [(For the Protoype board using an Olimex RP2040-Pico30 module, please click here.)](PC_board/README_prototype.md)
@@ -31,7 +31,7 @@ accessing the FX-BMP range of memory. Assuming that the CPU reads the data at th
 edge of /OE, this can be as slow as 174ns after /OE. (My design targets have been to keep this
 turnaround time below 150ns).
 
-The RP2040 has two CPU cores, and very fast GPIO access. It seemed possible to emply one
+The RP2040 has two CPU cores, and very fast GPIO access. It seemed possible to employ one
 CPU core to deal with external access to the memory - emulating a SRAM bus interface - and
 for the other CPU core to be used as a supervisor, allowing USB commands to read/write this
 memory, downloading programs and preparing them to be booted from.
@@ -72,10 +72,10 @@ In general, bus accesses progress through the following steps for a write cycle:
 - /WE transitions low
 - Data appears on the bus, to be written to the addressed device (not before /WE !)
 - /WE transitions high
-- In theory, the written-to device should latch data at this monment, but we can't react that fast, so we will latch earlier
+- In theory, the written-to device should latch data at this moment, but we can't react that fast, so we will latch earlier
 - /CE transitions high
 
-While this is the normal situation, there can also be cases where the /CE line does not returns to
+While this is the normal situation, there can also be cases where the /CE line does not return to
 high state before a subsequent address setup and corresponding /WE (or /OE) transition to low.
 
 Here is a visual of the actual timing of those sequences:
@@ -85,7 +85,7 @@ Here is a visual of the actual timing of those sequences:
 
 ### GPIO Versus PIO
 
-My original idea was to emply PIOs to manage the bus, but there are delays in crossing
+My original idea was to employ PIOs to manage the bus, but there are delays in crossing
 between CPU and PIO (to access the CPU's memory), which hobbled performance.  However,
 it turned out that the GPIO access functions are also very fast, enabling the RP2040 to
 reach the apparent required speed.
