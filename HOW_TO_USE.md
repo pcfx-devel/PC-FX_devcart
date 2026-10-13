@@ -24,7 +24,7 @@ Before using the Devcart in the PC-FX, you should do the following (while not pl
 
 ## Using the Cart in the PC-FX
 
-The FX-Devcart contains circuitry which communicated with the PC-FX, but it does not connect to the
+The FX-Devcart contains circuitry which communicates with the PC-FX, but it does not connect to the
 PC-FX's power supply; it takes its power from the USB connection, supplied by your host computer.
 
 **NOTE**: DO NOT PLUG the Devcart into your PC-FX while the power is on - either the PC-FX power, or the USB power.
@@ -36,8 +36,7 @@ PC-FX's power supply; it takes its power from the USB connection, supplied by yo
 ### Transferring SAV data from Computer to PC-FX:
 
 With the cartridge in the FX-BMP port and connected to the PC, you can move game save data
-images to the external cartridge memory, and subsequently move game save files from there to the
-console internal memory), using the file manager portion of the boot ROM.
+images to the Devcart, and use it as external cartridge memory.
 
 It is important to remember that the devcart does not retain data when the power (from USB)
 is removed, so don't try to use the dev cart for any permanent storage.
