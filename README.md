@@ -10,6 +10,10 @@ Here is a photo of a complete unit:
 ![Cart in Case](images/devcart_in_case.jpg)
 
 
+## How To Use
+
+For instructions on how to use the Devcart, please [see the overview here](HOW_TO_USE.md).
+
 ## Current Board Revision
 
 The current version is Ver2_RevB.
