@@ -18,8 +18,8 @@ Before using the Devcart in the PC-FX, you should do the following (while not pl
 
 1. On the first connection, the computer will create a virtual COM port on the host computer, which will be the device name required for communication via the python scripts.
 2. Find out the virtual COM port's name.
-   - On Windows, use Device Manager, and look under "Ports (COM & LPT)", and make a list if there are already devices there. Then insert the devcart, and check for a device with a name starting with "COM".  In this picture, the device is "COM33": [!Device Manager](images/Windows_device_list.jpg)
-   - On MacOS, open a terminal, and type 'ls -l /dev/tty.\*', then plug in the devcart and do it again. The new device is the devcart; in this paicture, it is "/dev/tty.usbmodem101":  [!MacOS](images/MacOS_devices.jpg)
+   - On Windows, use Device Manager, and look under "Ports (COM & LPT)", and make a list if there are already devices there. Then insert the devcart, and check for a device with a name starting with "COM".  In this picture, the device is "COM33": ![Device Manager](images/Windows_device_list.jpg)
+   - On MacOS, open a terminal, and type 'ls -l /dev/tty.\*', then plug in the devcart and do it again. The new device is the devcart; in this paicture, it is "/dev/tty.usbmodem101":  ![MacOS](images/MacOS_devices.jpg)
 
 
 ## Using the Cart in the PC-FX
