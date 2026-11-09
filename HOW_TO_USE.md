@@ -53,7 +53,7 @@ Example (Windows):
 python putbmp.py zeroigar.bmp COM33
 ```
 
-Once the data is transferred, you can power up the PC-FX, and use the file manager to move individual
+Once the data is transferred, you can power up the PC-FX, and use the file manager to copy individual games'
 save files to/from the internal memory.
 
 
@@ -62,9 +62,9 @@ save files to/from the internal memory.
 With the cartridge in the FX-BMP port and connected to the PC, you can:
 1. Turn on the PC-FX
 2. Use the file manager portion of the boot ROM to format the external cartridge memory, and
-3. Move game save files to it (from the console internal memory).
+3. Copy game save files to it (from the console internal memory).
 
-Running this command will ithen transmit that data to the host PC.
+Running this command will then transmit that data to the host PC.
 
 ```
 Usage: python getbmp.py <output_file> [COM port]
